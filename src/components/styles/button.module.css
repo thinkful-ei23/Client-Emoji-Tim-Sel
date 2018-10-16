@@ -1,0 +1,18 @@
+.actionButton {
+  background-color: #f53240;
+  border: none;
+  width: 140px;
+  height: 35px;
+  border-radius: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.actionButton:hover {
+  cursor: pointer;
+}
+
+.startButton {
+  display: block;
+  margin: 0 auto;
+}
