@@ -1,0 +1,15 @@
+.formInput {
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+/* .formInput label {
+    text-align: center;
+  } */
+
+.formInput input {
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 225px;
+}

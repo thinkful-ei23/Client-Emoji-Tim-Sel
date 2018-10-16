@@ -1,36 +1,41 @@
+
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-import { fetchProtectedData } from '../actions/protected-data';
+import { getQuestionData } from '../actions/questions';
+
+import HeaderBar from './header-bar';
+import Card from './emoji-card';
+import Quiz from './emoji-form';
 import Feedback from './feedback';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
-    this.props.dispatch(fetchProtectedData());
+    this.props.dispatch(getQuestionData());
   }
 
   render() {
     return (
       <div className="dashboard">
-        <div className="dashboard-username">
-          Username: {this.props.username}
-        </div>
-        <div className="dashboard-protected-data">
-          Protected data: {this.props.protectedData}
-          <Feedback />
-        </div>
+        <HeaderBar />
+
+        <Card
+          description={this.props.question.description}
+          emoji={this.props.question.emoji}
+        />
+
+        <Quiz />
+        <Feedback />
       </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-  const { currentUser } = state.auth;
   return {
-    username: state.auth.currentUser.username, 
-    protectedData: state.protectedData.data,
-    currentUser
+    username: state.auth.currentUser.username,
+    question: state.question.question
   };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(Dashboard)); 
+export default requiresLogin()(connect(mapStateToProps)(Dashboard));
