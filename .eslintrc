@@ -1,1 +1,3 @@
-echo '{"extends":"react-app"}' >> .eslintrc
+{
+  "extends": "react-app"
+}
