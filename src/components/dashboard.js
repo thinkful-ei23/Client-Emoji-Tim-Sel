@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
-// import { fetchProtectedData } from '../actions/protected-data';
+// import emoji from 'emoji-name-map';
 import { getQuestionData } from '../actions/questions';
 import HeaderBar from './header-bar';
+import Card from './emoji-card';
+import Quiz from './emoji-form';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
@@ -11,16 +13,22 @@ export class Dashboard extends React.Component {
   }
 
   render() {
-    console.log(this.props.question);
+    console.log(this.props.question.emoji);
     return (
       <div className="dashboard">
         <HeaderBar />
+        <Card
+          description={this.props.question.description}
+          emoji={this.props.question.emoji}
+        />
 
-        {/* <div className="dashboard-username">Username: {this.props.username}</div> */}
-        {/* <div className="dashboard-name">Name: {this.props.name}</div> */}
-        {/* <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
-                </div> */}
+        <Quiz />
+
+        {/* <form>
+                <label htmlFor="description">Your Answer:</label>
+                <input id="description" type="text"></input>
+                <button>Submit</button>
+              </form> */}
       </div>
     );
   }
@@ -31,7 +39,6 @@ const mapStateToProps = state => {
   return {
     username: state.auth.currentUser.username,
     question: state.question.question
-    // protectedData: state.protectedData.data
   };
 };
 
