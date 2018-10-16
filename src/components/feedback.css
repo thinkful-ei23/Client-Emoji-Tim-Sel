@@ -1,0 +1,28 @@
+.completed { 
+  width: 10%;
+  background-color: gold;
+  height:30px;
+  border: 1px 1px 1px 0;
+  border-color:black;
+  border-style: solid;
+}
+.completed:first { 
+  border-left: 1px color black;
+}
+
+.incomplete { 
+  width: 10%;
+  background-color: transparent;
+  height:30px;
+  border: 1px 1px 1px 0;
+  border-color:black;
+  border-style: solid;
+}
+.incomplete:first { 
+  border-left: 1px color black;
+}
+.progressBar {
+  width:50%;
+  margin:0 auto;
+  height:30px;
+}
