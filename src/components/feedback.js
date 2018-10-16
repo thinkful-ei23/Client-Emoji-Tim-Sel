@@ -9,14 +9,23 @@ export class Feedback extends React.Component {
   }
 
   render() {
-    
+    let resultsClass;
+    let isCorrect;
+ 
+    if (this.props.answer.userAnswer === this.props.answer.emoji.name) {
+      isCorrect = 'true';
+      resultsClass = 'feedback correct';
+    } else {
+      isCorrect = 'false';
+      resultsClass = 'feedback wrong';
+    }
     return (
-      <section className="feedback">
+      <section className={resultsClass}>
         <header className="feedback-title">Results</header>
-        <p className="emojiName">{this.props.answer.emoji.name}</p>
-        <p className="answerStatus">{this.props.answer.status}</p>
-        <p className="correctCount ">{this.props.user.emoji.correctCount}</p>
-        <p className="wrongCount ">{this.props.user.emoji.wrongCount}</p>
+        <p className="emojiName"><span className="title">Emoji Name: </span>{this.props.answer.emoji.name}</p>
+        <p className="answerStatus"><span className="title">Is Correct? </span>{isCorrect}</p>
+        <p className="correctCount "><span className="title">Number of correct emojis: </span>{this.props.user.emoji.correctCount}</p>
+        <p className="wrongCount "><span className="title">Number of incorrect emojis: </span>{this.props.user.emoji.wrongCount}</p>
       </section>
     );
   }
@@ -25,7 +34,7 @@ export class Feedback extends React.Component {
 const mapStateToProps = state => {
   return {
     user: state.auth.currentUser, 
-    protectedData: state.protectedData.data
+    answer: state.protectedData.current
   };
 };
 

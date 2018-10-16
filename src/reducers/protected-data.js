@@ -5,8 +5,13 @@ import {
 
 const initialState = {
     data: '',
+    current: {
+      userAnswer: null,
+      emoji: {name: null}
+    },
     error: null
-};
+}
+
 
 export default function reducer(state = initialState, action) {
     if (action.type === FETCH_PROTECTED_DATA_SUCCESS) {
