@@ -58,7 +58,8 @@ import Input from './input';
 import { login } from '../actions/auth';
 import { required, nonEmpty } from '../validators';
 
-import styles from './styles/button.module.css';
+import buttonStyles from './styles/button.module.css';
+import formStyles from './styles/forms.module.css';
 
 export class LoginForm extends React.Component {
   onSubmit(values) {
@@ -76,7 +77,7 @@ export class LoginForm extends React.Component {
     }
     return (
       <form
-        className="login-form"
+        className={formStyles.loginForm}
         onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
       >
         {error}
@@ -97,7 +98,7 @@ export class LoginForm extends React.Component {
           validate={[required, nonEmpty]}
         />
         <button
-          className={styles.formButton}
+          className={buttonStyles.formButton}
           disabled={this.props.pristine || this.props.submitting}
         >
           Log in
