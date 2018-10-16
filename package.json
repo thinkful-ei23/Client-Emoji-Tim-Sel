@@ -13,12 +13,25 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-form": "^7.3.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel.git"
+  },
+  "author": "Tim-Sel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel/issues"
+  },
+  "homepage": "https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel#readme"
 }
