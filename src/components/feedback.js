@@ -11,20 +11,27 @@ export class Feedback extends React.Component {
   render() {
     let resultsClass;
     let isCorrect;
+    let title;
+    let answerStatus;
+    let msg;
     if (this.props.answer.userResponseReady) {
       if (this.props.answer.currentUserAnswer === this.props.answer.currentEmojiQuestion) {
-        isCorrect = 'true';
+        msg = "Let's try another!";
         resultsClass = 'feedback correct';
+        title="CORRECT ANSWER";
+        answerStatus = "correct"
       } else {
-        isCorrect = 'false';
+        msg = "Let's try again.";
         resultsClass = 'feedback wrong';
+        title="WRONG ANSWER";
+        answerStatus = "incorrect"
       }
       return (
         <section className={resultsClass}>
           <div>
-            <header className="feedback-title">Results</header>
-            <p className="emojiName"><span className="title">Emoji Name: </span>{this.props.answer.currentEmojiQuestion}</p>
-            <p className="answerStatus"><span className="title">Is Correct? </span>{isCorrect}</p>
+            <header className="feedback-title">{title}</header>
+            <p className="emojiName"><span className="title"></span>{this.props.answer.currentEmojiQuestion}</p>
+            <p ><span className={answerStatus}>{msg}</span></p>
           </div>
         </section>
       );

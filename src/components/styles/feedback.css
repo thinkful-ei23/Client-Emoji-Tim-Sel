@@ -37,13 +37,41 @@
   font-weight:bold;
   font-size:1.5vw;
 }
+
 .correct div{
-  border:7px blue solid;
+
   border-radius:7px;
+  background-color:green;
+  color:white;
+  font-size:6vw;
+  padding:5px;
+  border-radius:10px;
+}
+span.correct {
+  font-size:2vw;
+  padding:5px;
+  border-radius:10px;
+  font-weight:bold;
 }
 .wrong div{
-  border:7px red solid;
   border-radius:7px;
+  background-color:red;
+  color:white;
+  font-size:6vw;
+  padding:10px;
+}
+.incorrect {
+  background:white;
+  color:red;
+  font-weight:bold;
+  font-size:2vw;
+  padding:5px;
+  border-radius:10px;
+}
+.correct {
+  background:white;
+  color:green;
+  font-weight:bold;
 }
 .feedback {
   margin-top:45px;
@@ -53,5 +81,5 @@
   text-align:left;
   width: 40%;
   margin:0 auto;
-  padding:10px;
+
 }
