@@ -1,11 +1,16 @@
 import {
   FETCH_QUESTION_REQUEST,
   FETCH_QUESTION_SUCCESS,
-  FETCH_QUESTION_ERROR
+  FETCH_QUESTION_ERROR,
+  VALIDATE_USER_INPUT_REQUEST,
+  VALIDATE_USER_INPUT_SUCCESS,
+  VALIDATE_USER_INPUT_ERROR
 } from '../actions/questions';
 
 const initialState = {
   question: {},
+  feedback: '',
+  answer: '',
   error: null,
   loading: false
 };
@@ -21,9 +26,28 @@ const fetchQuestion = (state = initialState, action) => {
     return {
       ...state,
       loading: false,
-      question: action.question
+      question: action.question.question,
+      answer: action.question.description
     };
   } else if (action.type === FETCH_QUESTION_ERROR) {
+    return {
+      ...state,
+      loading: false,
+      error: action.error
+    };
+  } else if (action.type === VALIDATE_USER_INPUT_REQUEST) {
+    return {
+      ...state,
+      loading: true,
+      error: null
+    };
+  } else if (action.type === VALIDATE_USER_INPUT_SUCCESS) {
+    return {
+      ...state,
+      loading: false,
+      feedback: action.feedback
+    };
+  } else if (action.type === VALIDATE_USER_INPUT_ERROR) {
     return {
       ...state,
       loading: false,
