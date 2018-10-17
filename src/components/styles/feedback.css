@@ -37,7 +37,11 @@
   font-weight:bold;
   font-size:1.5vw;
 }
-.wrong {
+.correct div{
+  border:7px blue solid;
+  border-radius:7px;
+}
+.wrong div{
   border:7px red solid;
   border-radius:7px;
 }

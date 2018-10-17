@@ -19,8 +19,6 @@ export class Feedback extends React.Component {
         isCorrect = 'false';
         resultsClass = 'feedback wrong';
       }
-
-      console.log('this.props: ', this.props);
       return (
         <section className={resultsClass}>
           <div>

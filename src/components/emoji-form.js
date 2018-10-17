@@ -7,8 +7,6 @@ export default function Quiz(props) {
 
 
   const dispatchUserResponse = (emoji, answer) => {
-    console.log('emoji: ', emoji, ' answer: ', answer);
-    console.log('props: ', props);
     props.dispatch(setUserQuestion(emoji));
     props.dispatch(setUserResponse(answer));
   }
@@ -16,7 +14,7 @@ export default function Quiz(props) {
     <form className={`${inputStyles.formInput} ${formStyles.emojiForm}`}>
       <label htmlFor="description">Your Answer:</label>
       <input id="description" type="text" />
-      <button className={buttonStyles.formButton}onClick={() => dispatchUserResponse(document.getElementById("emoji").getAttribute("aria-label"), document.getElementById("description").value)}>Submit</button>
+      <button className={buttonStyles.formButton}onClick={(event) => {event.preventDefault();dispatchUserResponse(document.getElementById("emoji").getAttribute("aria-label"), document.getElementById("description").value)}}>Submit</button>
     </form>
   );
 }

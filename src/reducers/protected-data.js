@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   data: '',
-  userResponseReady: false,
+  userResponseReady: '',
   currentUserAnswer: null,
   currentEmojiQuestion: null,
   error: null
