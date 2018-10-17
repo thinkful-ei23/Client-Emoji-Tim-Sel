@@ -8,6 +8,7 @@ import HeaderBar from './header-bar';
 import Card from './emoji-card';
 import Quiz from './emoji-form';
 import Feedback from './feedback';
+import './styles/dashboard.module.css';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
@@ -18,13 +19,14 @@ export class Dashboard extends React.Component {
     return (
       <div className="dashboard">
         <HeaderBar />
-
+      <section className="question">
         <Card
           description={this.props.question.description}
           emoji={this.props.question.emoji}
         />
 
-        <Quiz />
+        <Quiz dispatch={this.props.dispatch}/>
+      </section>
         <Feedback />
       </div>
     );

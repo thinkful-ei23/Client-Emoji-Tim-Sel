@@ -48,7 +48,7 @@ export function LoginPage(props) {
   return (
     <div className={styles.allContent}>
       <Link to="/" className={styles.logoLink}>
-        <img className={styles.logo} src={emojiLogo} alt="emoji logo" />
+        <img id="login-logo" className={styles.logo}  src={emojiLogo} alt="emoji logo" />
       </Link>
       <h2 className={styles.header}>Login</h2>
       <LoginForm />

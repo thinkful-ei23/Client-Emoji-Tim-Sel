@@ -1,0 +1,27 @@
+.dashboard {
+  box-sizing: border-box;
+  border-radius: 25px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.question{
+  width:40%;
+  margin:0 auto;
+}
+
+.dashboard div {
+  width:40%;
+  margin:0 auto;
+  text-align:center;
+  padding:20px;
+}
+#emoji {
+  font-size: 10vw;
+}
+
+input {
+  margin-top:20px;
+ 
+
+}

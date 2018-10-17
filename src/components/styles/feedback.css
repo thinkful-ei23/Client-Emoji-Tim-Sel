@@ -28,7 +28,10 @@
 }
 .title {
   font-weight:bold;
-  font-size:.8vw;
+  font-size:1.5vw;
+}
+.answerStatus {
+  font-size:1.7vw;
 }
 .feedback-title {
   font-weight:bold;
@@ -37,4 +40,14 @@
 .wrong {
   border:7px red solid;
   border-radius:7px;
+}
+.feedback {
+  margin-top:45px;
+  text-align:center;
+}
+.feedback div {
+  text-align:left;
+  width: 40%;
+  margin:0 auto;
+  padding:10px;
 }

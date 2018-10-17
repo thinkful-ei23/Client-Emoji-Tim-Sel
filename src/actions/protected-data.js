@@ -12,6 +12,17 @@ export const fetchProtectedDataError = error => ({
     type: FETCH_PROTECTED_DATA_ERROR,
     error
 });
+export const SET_USER_QUESTION = 'SET_USER_QUESTION';
+export const setUserQuestion = (emoji) => ({
+    type: SET_USER_QUESTION,
+    emoji
+});
+
+export const SET_USER_RESPONSE = 'SET_USER_RESPONSE';
+export const setUserResponse = (answer) => ({
+    type: SET_USER_RESPONSE,
+    answer
+});
 
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;

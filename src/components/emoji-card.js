@@ -6,7 +6,7 @@ import styles from './styles/card.module.css';
 export default function Card(props) {
   return (
     <div className={styles.card}>
-      <span className={styles.emoji} role="img" aria-label={props.description}>
+      <span id="emoji" className={styles.emoji} role="img" aria-label={props.description}>
         {emoji.get(`${props.emoji}`)}
       </span>
     </div>

@@ -37,7 +37,7 @@ import styles from './styles/landing-page.module.css';
 export default function LandingPage(props) {
   return (
     <div>
-      <section>
+      <section className="landing">
         <img className={styles.logo} src={emojiLogo} alt="winking emoji" />
         <h2>Welcome to the Emoji Spaced Repetition App TEST !</h2>
         <p>
