@@ -9,7 +9,6 @@
   width: 50px;
   display: block;
   margin: 0 auto;
-  
 }
 
 .logoLink {
@@ -25,6 +24,7 @@
 
 .linkToOtherForm {
   text-align: center;
+  /* margin-top: 15px; */
 }
 
 .emojiForm {
@@ -40,7 +40,4 @@
 .loginForm,
 .registerForm {
   text-align: center;
-}
-#login-logo {
-  width:18%;
 }

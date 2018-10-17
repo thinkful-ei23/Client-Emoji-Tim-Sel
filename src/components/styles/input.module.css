@@ -4,12 +4,14 @@
 }
 
 /* .formInput label {
-    text-align: center;
-  } */
+  text-align: center;
+} */
 
 .formInput input {
   border-radius: 20px;
   border: none;
   height: 30px;
   width: 225px;
+  padding: 0 7px;
+  margin-bottom: 10px;
 }

@@ -10,46 +10,46 @@ export class Quiz extends React.Component {
     event.preventDefault();
 
     // grabs the value of the input element after you submit the form
-    const userInput = event.target.answer.value;
+    const userInput = document.getElementById('answer').value;
+    document.getElementById('answer').value = '';
+
     this.props.dispatch(validateUserInput(userInput));
   }
 
-  nextButton() {
+  nextButton(event) {
+    event.preventDefault();
     this.props.dispatch(getQuestionData());
   }
 
-  componentDidUpdate() {
-    // this.props.dispatch(getQuestionData());
-  }
-
   render() {
-    return (
-      <div>
-        <form
-          className={`${inputStyles.formInput} ${formStyles.emojiForm}`}
-          onSubmit={event => this.onSubmit(event)}
-        >
-          <label htmlFor="description">Your Answer:</label>
-          <input id="description" type="text" name="answer" />
-          <button className={buttonStyles.formButton}>Submit</button>
-        </form>
+    const form = this.props.userAnswered ? (
+      <button
+        className={buttonStyles.formButton}
+        onClick={event => this.nextButton(event)}
+      >
+        Next
+      </button>
+    ) : (
+      <React.Fragment>
+        <label htmlFor="answer">Your Answer:</label>
+        <input id="answer" type="text" name="answer" />
         <button
           className={buttonStyles.formButton}
-          onClick={() => this.nextButton()}
+          onClick={event => this.onSubmit(event)}
         >
-          Next
+          Submit
         </button>
-        {/* <p className={`${inputStyles.formInput}`}>{this.props.feedback}</p> */}
+      </React.Fragment>
+    );
+
+    return (
+      <div>
+        <form className={`${inputStyles.formInput} ${formStyles.emojiForm}`}>
+          {form}
+        </form>
       </div>
     );
   }
 }
 
-const mapStatToProps = state => {
-  return {
-    // feedback: state.question.feedback,
-    // answer: state.question.question.description
-  };
-};
-
-export default connect(mapStatToProps)(Quiz);
+export default connect()(Quiz);
