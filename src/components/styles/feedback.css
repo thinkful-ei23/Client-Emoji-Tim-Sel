@@ -67,11 +67,13 @@ span.correct {
   font-size:2vw;
   padding:5px;
   border-radius:10px;
+  cursor:pointer;
 }
 .correct {
   background:white;
   color:green;
   font-weight:bold;
+  cursor:pointer;
 }
 .feedback {
   margin-top:45px;
