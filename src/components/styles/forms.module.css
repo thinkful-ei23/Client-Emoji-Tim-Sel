@@ -42,8 +42,22 @@
   text-align: center;
 }
 #login-logo {
-  width:18%;
+  width:20%;
+  margin:0 auto;
+}
+.loginPage {
+  width:40%;
+  margin:0 auto;
 }
 form{
+  width:400px;
   margin:20px auto 0;
+}
+.logoBlock {
+
+  margin:0 auto;
+}
+.nextButton  button{
+  margin: 0 auto;
+  width:60px;
 }

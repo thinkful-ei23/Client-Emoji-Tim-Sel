@@ -1,20 +1,28 @@
-@media screen and (min-width: 1200px) {
+
+
+.landingLogo {
+  text-align:center;
+  width:80%;
+  margin:0 auto;
+
+}
+
 
 h2 {
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 .app {
   padding:20px;
   margin:0 auto;
 }
 .landing {
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 10%;
 }
 
 .logo {
-  width: 50px;
+  width: 50%;
   display: block;
   margin: 0 auto;
 }
@@ -52,9 +60,38 @@ footer p {
   width: 50%;
 
 }
-.landingLogo {
-  text-align:center;
-  width:80%;
-  margin:0 auto;
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size:1vw;
+  }
+  .landingLogo {
+    text-align:center;
+    width:50%;
+    margin:0 auto;
+
+  }
+
 }
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size:2vw;
+  }
+  .landingLogo {
+    text-align:center;
+    width:300px;
+    margin:0 auto;
+
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+  h2 {
+    font-size:3vw;
+  }
+}
+@media screen and (min-width: 320px) {
+  h2 {
+    font-size:4vw;
+  }
 }
