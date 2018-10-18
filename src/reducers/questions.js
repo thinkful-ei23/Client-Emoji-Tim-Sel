@@ -4,7 +4,10 @@ import {
   FETCH_QUESTION_ERROR,
   VALIDATE_USER_INPUT_REQUEST,
   VALIDATE_USER_INPUT_SUCCESS,
-  VALIDATE_USER_INPUT_ERROR
+  VALIDATE_USER_INPUT_ERROR,
+  SET_NUMBER_TIMES_CORRECT,
+  SET_NUMBER_TIMES_INCORRECT
+
 } from '../actions/questions';
 
 const initialState = {
@@ -13,7 +16,9 @@ const initialState = {
   answer: '',
   userAnswered: false,
   error: null,
-  loading: false
+  loading: false,
+  numberTimesCorrect: 0,
+  numberTimesInCorrect: 0
 };
 
 const fetchQuestion = (state = initialState, action) => {
@@ -56,8 +61,20 @@ const fetchQuestion = (state = initialState, action) => {
       loading: false,
       error: action.error
     };
+  } else if (action.type === SET_NUMBER_TIMES_CORRECT) {
+    return {
+      ...state,
+      numberTimesCorrect: state.numberTimesCorrect + 1,
+      error: action.error
+    };
+  } else if (action.type === SET_NUMBER_TIMES_INCORRECT) {
+    return {
+      ...state,
+      loading: false,
+      numberTimesInCorrect: state.numberTimesInCorrect + 1,
+      error: action.error
+    };
   }
-
   return state;
 };
 
