@@ -1,14 +1,26 @@
 .dashboardFeedback {
   width: 40%;
   margin: 0 auto;
-  text-align: center;
-  /* border: 1px black solid; */
-  padding: 0;
+
+
+}
+.question{
+  width:40%;
+  margin:0 auto;
 }
 
-.feedback {
-  color: white;
-  font-weight: 900;
-  font-size: 1.5em;
-  /* border: 1px black solid; */
+.dashboard  {
+  width:40%;
+  margin:0 auto;
+
+  padding:20px;
+}
+ 
+
+#emoji {
+  font-size: 10vw;
+}
+
+input {
+  margin-top:20px;
 }

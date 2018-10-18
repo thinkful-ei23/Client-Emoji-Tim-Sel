@@ -38,7 +38,7 @@ export default function LandingPage(props) {
   return (
     <div>
       <section className="landing">
-        <img className={styles.logo} src={emojiLogo} alt="winking emoji" />
+        <p className="landingLogo"><img className={styles.logo} src={emojiLogo} alt="winking emoji" /></p>
         <h2>Welcome to the Emoji Spaced Repetition App TEST !</h2>
         <p>
           This course will help you to communicate quickly and effortlessly,

@@ -34,11 +34,12 @@ export class Quiz extends React.Component {
         <label htmlFor="answer">Your Answer:</label>
         <input id="answer" type="text" name="answer" />
         <button
-          className={buttonStyles.formButton}
+          className="{buttonStyles.formButton}"
           onClick={event => this.onSubmit(event)}
         >
           Submit
         </button>
+        
       </React.Fragment>
     );
 

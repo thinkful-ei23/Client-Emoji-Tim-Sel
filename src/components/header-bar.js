@@ -14,8 +14,9 @@ export class HeaderBar extends React.Component {
   render() {
     return (
       <div className={styles.headerBar}>
+        <button className="logout" onClick={() => this.logOut()}>Log out</button>
         <h1>Hi, {this.props.username}</h1>
-        <button onClick={() => this.logOut()}>Log out</button>
+
       </div>
     );
   }

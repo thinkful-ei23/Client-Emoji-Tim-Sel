@@ -1,3 +1,10 @@
+h1 {  
+  font-size: 2em;
+  color: #108776;
+  margin:0 auto;
+  width:300px;
+  text-align:center;
+}
 .card {
   box-sizing: border-box;
   width: 200px;
@@ -5,16 +12,160 @@
   border-radius: 25px;
   background-color: white;
   margin: 0 auto;
-  text-align: center;
+  margin-top: 45px;
+  
   padding-top: 45px;
-}
-
-.emoji {
-  font-size: 800%;
-  margin-top: -7px;
 }
 
 .description {
   text-transform: capitalize;
   margin-top: -5px;
 }
+.emoji{
+  display:inline-block;
+  border:1px #666 solid;
+  background-color:#eee;
+  color:666;
+  font-size: 20vw;
+  padding:10px 25px ;
+  margin: 10px 0;
+  border-radius:10px;
+  background-color:#efefef;
+  max-width:300px;
+}
+.logout {
+  float:right;
+  margin-right:25px;
+}
+p {
+  text-align:left;
+  margin:5px;
+}
+.question {
+  text-align: center;
+  margin:0 auto;
+}
+.scores {
+  font-size:1vw;
+}
+
+
+
+ form{
+  max-width:330px;
+  margin:20px auto 0;
+}
+button.next {
+  display:block;
+  width:60px;
+  margin:40px auto 0;
+}
+.spin{ 
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+.correctAnswer {
+  text-align:center;
+  font-size:5vw;
+}
+.feedback {
+  margin-top:30px;
+  text-align:center;
+}
+
+p.fb{
+  text-align:center;
+}
+.correct {
+  background-color: green;
+  color:white;
+}
+.incorrect {
+  background-color: red;
+  color:white;
+}
+div.resultsCorrect {
+  height:200px;
+  border:1px #666 solid;
+  width:40%;
+  margin:0 auto;
+  text-align:left;
+  border-radius:10px;
+  background-color:green;
+  max-width:350px;
+  font-size:2vw;
+  color:white;
+}
+
+div.resultsIncorrect {
+  height:200px;
+  border:1px #666 solid;
+  width:40%;
+  margin:0 auto;
+  text-align:left;
+  border-radius:10px;
+  background-color:red;
+  max-width:350px;
+  font-size:2vw;
+  color:white;
+}
+@media screen and (min-width: 1200px) {
+  .emoji{ 
+     font-size: 200px;
+  }
+  div.resultsCorrect {
+    height:200px;
+    border:1px #666 solid;
+    width:40%;
+    margin:0 auto;
+    text-align:left;
+    border-radius:10px;
+    background-color:green;
+    max-width:350px;
+    font-size:2vw;
+    color:white;
+
+  }
+  div.resultsIncorrect {
+    height:200px;
+    border:1px #666 solid;
+    width:40%;
+    margin:0 auto;
+    text-align:left;
+    border-radius:10px;
+    background-color:red;
+    max-width:350px;
+    font-size:2vw;
+    color:white;
+
+  }
+  .fb {
+    text-align:center;
+    font-size:2vw;
+  }
+  .feedback {
+    margin-top:30px;
+    text-align:center;
+  }
+  .correctAnswer {
+    text-align:center;
+    font-size:3vw;
+  }
+  .nextButton {
+    width:60px;
+    margin: 0 auto;
+    text-align:center;
+  }
+}
+

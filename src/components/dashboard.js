@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import requiresLogin from './requires-login';
 import { getQuestionData } from '../actions/questions';
 
-import styles from './styles/dashboard.module.css';
+//import styles from './styles/dashboard.module.css';
+//import inputStyles from './styles/input.module.css';
 
 import HeaderBar from './header-bar';
 import Card from './emoji-card';
@@ -16,21 +17,20 @@ export class Dashboard extends React.Component {
 
   render() {
     const feedbackTag = (
-      <p className={styles.feedback}>{this.props.feedback}</p>
+      <span className="fb">{this.props.feedback.outcome}</span>
     );
 
     return (
       <div>
         <HeaderBar />
-
-        <div className={styles.dashboardFeedback}>
-          {this.props.userAnswered ? feedbackTag : ''}
-        </div>
-
         <Card
+          outcome={this.props.feedback.outcome}
+          userAnswered={this.props.userAnswered}
           description={this.props.question.description}
           emoji={this.props.question.emoji}
-          userAnswered={this.props.userAnswered}
+          feedback = {this.props.userAnswered ? feedbackTag : ''}
+          correctCount ={this.props.feedback.numberTimesCorrect}
+          inCorrectCount ={this.props.feedback.numberTimesInCorrect}
         />
 
         <Quiz userAnswered={this.props.userAnswered} />
@@ -41,11 +41,14 @@ export class Dashboard extends React.Component {
 
 const mapStateToProps = state => {
   return {
+    currentUser: state.auth.currentUser,
     username: state.auth.currentUser.username,
     question: state.question.question,
     feedback: state.question.feedback,
     emojiAnswer: state.question.question.description,
     userAnswered: state.question.userAnswered
+    // correctCount: state.question.numberTimesCorrect,
+    // inCorrectCount: state.question.numberTimesInCorrect
   };
 };
 

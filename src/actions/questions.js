@@ -28,6 +28,17 @@ export const validateUserInputSuccess = feedback => ({
   type: VALIDATE_USER_INPUT_SUCCESS,
   feedback
 });
+export const SET_NUMBER_TIMES_CORRECT = 'SET_NUMBER_TIMES_CORRECT';
+export const setNumberTimesCorrect = correctCount => ({
+  type: SET_NUMBER_TIMES_CORRECT,
+  correctCount
+});
+export const SET_NUMBER_TIMES_INCORRECT = 'SET_NUMBER_TIMES_INCORRECT';
+export const setNumberTimesInCorrect = inCorrectCount => ({
+  type: SET_NUMBER_TIMES_INCORRECT,
+  inCorrectCount
+});
+
 
 export const VALIDATE_USER_INPUT_ERROR = 'VALIDATE_USER_INPUT_ERROR';
 export const validateUserInputError = error => ({
@@ -71,7 +82,11 @@ export const validateUserInput = userInput => (dispatch, getState) => {
       .then(res => res.json())
       .then(data => {
         const feedback = data.msg;
+        // const numberTimesCorrect = data.msg.numberTimesCorrect;
+        // const numberTimesInCorrect = data.msg.numberTimesInCorrect;
         dispatch(validateUserInputSuccess(feedback));
+        // dispatch(setNumberTimesCorrect(numberTimesCorrect));
+        // dispatch(setNumberTimesInCorrect(numberTimesInCorrect));
       })
       // .then(dispatch => dispatch(getQuestionData()))
       .catch(err => dispatch(validateUserInputError(err)))
