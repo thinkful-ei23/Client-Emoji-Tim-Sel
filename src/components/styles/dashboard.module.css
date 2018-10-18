@@ -2,7 +2,7 @@
   box-sizing: border-box;
   border-radius: 25px;
   margin: 0 auto;
-  text-align: center;
+
 
 }
 .question{
@@ -13,7 +13,7 @@
 .dashboard  {
   width:40%;
   margin:0 auto;
-  text-align:center;
+
   padding:20px;
 }
  

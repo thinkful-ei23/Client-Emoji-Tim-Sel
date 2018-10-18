@@ -13,7 +13,7 @@ h1 {
   background-color: white;
   margin: 0 auto;
   margin-top: 45px;
-  text-align: center;
+  
   padding-top: 45px;
 }
 
@@ -35,20 +35,18 @@ h1 {
   margin-right:25px;
 }
 p {
-  width: 40%;
-
-  margin:0 auto;
-  text-align:center;
-}
-div.results {
-  height:200px;
-  border:1px #666 solid;
-  width:40%;
-  margin:0 auto;
   text-align:left;
-  border-radius:10px;
-  background-color:#efefef;
+  margin:5px;
 }
+.question {
+  text-align: center;
+  margin:0 auto;
+}
+.scores {
+  font-size:1vw;
+}
+
+
 
  form{
   max-width:330px;
@@ -65,14 +63,7 @@ button.next {
   animation-iteration-count: 1;
   animation-timing-function: linear; 
 }
-@media screen and (min-width: 1200px) {
-  .emoji{ 
-     font-size: 200px;
-  }
-  div.results {
-    width:325px;
-  }
-}
+
 @keyframes spin {
   from {
       transform:rotate(0deg);
@@ -81,3 +72,92 @@ button.next {
       transform:rotate(360deg);
   }
 }
+.correctAnswer {
+  text-align:center;
+  font-size:5vw;
+}
+.feedback {
+  margin-top:30px;
+  text-align:center;
+}
+
+p.fb{
+  text-align:center;
+}
+.correct {
+  background-color: green;
+  color:white;
+}
+.incorrect {
+  background-color: red;
+  color:white;
+}
+div.resultsCorrect {
+  height:200px;
+  border:1px #666 solid;
+  width:40%;
+  margin:0 auto;
+  text-align:left;
+  border-radius:10px;
+  background-color:green;
+  max-width:350px;
+  font-size:2vw;
+  color:white;
+}
+
+div.resultsIncorrect {
+  height:200px;
+  border:1px #666 solid;
+  width:40%;
+  margin:0 auto;
+  text-align:left;
+  border-radius:10px;
+  background-color:red;
+  max-width:350px;
+  font-size:2vw;
+  color:white;
+}
+@media screen and (min-width: 1200px) {
+  .emoji{ 
+     font-size: 200px;
+  }
+  div.resultsCorrect {
+    height:200px;
+    border:1px #666 solid;
+    width:40%;
+    margin:0 auto;
+    text-align:left;
+    border-radius:10px;
+    background-color:green;
+    max-width:350px;
+    font-size:2vw;
+    color:white;
+
+  }
+  div.resultsIncorrect {
+    height:200px;
+    border:1px #666 solid;
+    width:40%;
+    margin:0 auto;
+    text-align:left;
+    border-radius:10px;
+    background-color:red;
+    max-width:350px;
+    font-size:2vw;
+    color:white;
+
+  }
+  .fb {
+    text-align:center;
+    font-size:2vw;
+  }
+  .feedback {
+    margin-top:30px;
+    text-align:center;
+  }
+  .correctAnswer {
+    text-align:center;
+    font-size:3vw;
+  }
+}
+
