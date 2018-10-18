@@ -10,18 +10,18 @@
   margin:0 auto;
 }
 
-.dashboard div {
+.dashboard  {
   width:40%;
   margin:0 auto;
   text-align:center;
   padding:20px;
 }
+ 
+
 #emoji {
   font-size: 10vw;
 }
 
 input {
   margin-top:20px;
- 
-
 }

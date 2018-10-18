@@ -34,7 +34,7 @@ export class Quiz extends React.Component {
           <button className={buttonStyles.formButton}>Submit</button>
         </form>
         <button
-          className={buttonStyles.formButton}
+          className="next"
           onClick={() => this.nextButton()}
         >
           Next

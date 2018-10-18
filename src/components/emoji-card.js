@@ -7,14 +7,16 @@ export default function Card(props) {
   console.log('props.userAnswered: ', props.userAnswered);
   const userAnsweredTag = <p>userAnsweredTag {props.description}</p>;
   return (
-    <div className={styles.card}>
-      <span className={styles.emoji} role="img" aria-label={props.description}>
+    <div classname={styles.emoji}>
+      <p><span className="emoji" role="img" aria-label={props.description}>
         {emoji.get(`${props.emoji}`)}
-      </span>
-      {props.userAnswered ? userAnsweredTag : ''}
-      {console.log('card props: ', props )}
-      <p className="scores"><span className="title">Number Times Correct</span> {props.correctCount}</p>
-      <p className="scores"><span className="title">Number Times Incorrect</span> {props.inCorrectCount}</p>
+      </span></p>
+      <div className="results">
+        <p classname="correctAnswer">{props.userAnswered ? userAnsweredTag : ''}</p>
+        <p className="feedback"><span className="title"></span> {props.feedback}</p>
+        <p className="scores"><span className="title">Times Correct</span> {props.correctCount}</p>
+        <p className="scores"><span className="title">Times Incorrect</span> {props.inCorrectCount}</p>
+      </div>
     </div>
   );
 }

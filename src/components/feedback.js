@@ -10,12 +10,12 @@ export class Feedback extends React.Component {
 
   render() {
     let resultsClass;
-    let isCorrect;
     let title;
     let answerStatus;
     let msg;
+    console.log('this.props: ', this.props);
     if (this.props.userAnswered) {
-      if (this.props.outcome === "Correct") {
+      if (this.props.feedback.outcome === "Correct") {
         msg = "Let's try another!";
         resultsClass = 'feedback correct';
         title="CORRECT ANSWER";

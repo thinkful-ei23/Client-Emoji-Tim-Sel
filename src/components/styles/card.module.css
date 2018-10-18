@@ -1,3 +1,10 @@
+h1 {  
+  font-size: 2em;
+  color: #108776;
+  margin:0 auto;
+  width:300px;
+  text-align:center;
+}
 .card {
   box-sizing: border-box;
   width: 200px;
@@ -10,6 +17,67 @@
   padding-top: 45px;
 }
 
-.emoji {
-  font-size: 800%;
+
+.emoji{
+  display:inline-block;
+  border:1px #666 solid;
+  background-color:#eee;
+  color:666;
+  font-size: 20vw;
+  padding:10px 25px ;
+  margin: 10px 0;
+  border-radius:10px;
+  background-color:#efefef;
+  max-width:300px;
+}
+.logout {
+  float:right;
+  margin-right:25px;
+}
+p {
+  width: 40%;
+
+  margin:0 auto;
+  text-align:center;
+}
+div.results {
+  height:200px;
+  border:1px #666 solid;
+  width:40%;
+  margin:0 auto;
+  text-align:left;
+  border-radius:10px;
+  background-color:#efefef;
+}
+
+ form{
+  max-width:330px;
+  margin:20px auto 0;
+}
+button.next {
+  display:block;
+  width:60px;
+  margin:40px auto 0;
+}
+.spin{ 
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; 
+}
+@media screen and (min-width: 1200px) {
+  .emoji{ 
+     font-size: 200px;
+  }
+  div.results {
+    width:325px;
+  }
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }

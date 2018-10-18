@@ -16,17 +16,16 @@ export class Dashboard extends React.Component {
 
   render() {
     const feedbackTag = (
-      <p className={`${inputStyles.formInput}`}>Feedback Message:git status {this.props.feedback.outcome}</p>
+      <p className={`${inputStyles.formInput}`}>Feedback Message: {this.props.feedback.outcome}</p>
     );
     return (
       <div className="dashboard">
         <HeaderBar />
 
-        {this.props.userAnswered ? feedbackTag : ''}
         <Card
           description={this.props.question.description}
           emoji={this.props.question.emoji}
-          userAnswered={this.props.userAnswered}
+          feedback = {this.props.userAnswered ? feedbackTag : ''}
           correctCount ={this.props.feedback.numberTimesCorrect}
           inCorrectCount ={this.props.feedback.numberTimesInCorrect}
         />
