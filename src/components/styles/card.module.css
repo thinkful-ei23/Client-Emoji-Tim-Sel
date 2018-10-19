@@ -72,7 +72,7 @@ progress {
   width:160px;
 }
 .scores,.fb {
-  font-size:1.5vw;
+  font-size:1.2vw;
   text-align:center;
   font-size:2vw;
 }
@@ -137,6 +137,10 @@ div.resultsIncorrect {
   color:white;
 }
 @media screen and (min-width: 1200px) {
+  .scores, .fb {
+    text-align: center;
+    font-size: 1.2vw;
+}
   .emoji{ 
      font-size: 200px;
   }
@@ -166,9 +170,9 @@ div.resultsIncorrect {
     color:white;
 
   }
-  .fb {
+  .title {
     text-align:center;
-    font-size:2vw;
+    font-size:1.2vw;
   }
   .feedback {
     margin-top:5px;
