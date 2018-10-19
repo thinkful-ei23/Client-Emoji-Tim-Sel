@@ -8,14 +8,7 @@ import {
 
 const initialState = {
     authToken: null, // authToken !== null does not mean it has been validated
-    currentUser: {
-      uid: null,
-      username: null,
-      emoji: {
-        correctCount: 0,
-        wrongCount: 0
-      }
-    },
+    currentUser: {},
     loading: false,
     error: null
 };

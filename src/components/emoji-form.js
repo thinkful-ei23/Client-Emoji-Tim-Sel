@@ -23,7 +23,7 @@ export class Quiz extends React.Component {
 
   render() {
     const form = this.props.userAnswered ? (
-      <button
+      <button id="next"
         className={buttonStyles.formButton}
         onClick={event => this.nextButton(event)}
       >

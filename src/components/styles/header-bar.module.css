@@ -6,8 +6,8 @@
 
 .headerBar button {
   float: right;
-  position: relative;
-  top: -55px;
+  /*position: relative;
+  top: -55px; */
   margin-right: 25px;
   background-color: transparent;
   border: 2px solid #108776;

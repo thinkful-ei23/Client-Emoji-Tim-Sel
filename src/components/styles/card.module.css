@@ -34,8 +34,8 @@ h1 {
   max-width:300px;
 }
 .logout {
-  float:right;
-  margin-right:25px;
+  /*float:right;
+  margin-right:25px;*/
 }
 p {
   text-align:left;
@@ -55,11 +55,28 @@ p {
 
   margin:20px auto;
 }
-button.next {
+#next{
   display:block;
   width:60px;
   margin:40px auto 0;
 }
+
+progress {
+  margin:0 auto;
+  width:160px;
+  display:block;
+}
+.Progress-label {
+  display:block;
+  margin:0 auto;
+  width:160px;
+}
+.scores,.fb {
+  font-size:1.5vw;
+  text-align:center;
+  font-size:2vw;
+}
+
 .spin{ 
   animation-name: spin;
   animation-duration: 5000ms;
@@ -80,7 +97,7 @@ button.next {
   font-size:5vw;
 }
 .feedback {
-  margin-top:30px;
+  margin-top:5px;
   text-align:center;
 }
 
@@ -154,7 +171,7 @@ div.resultsIncorrect {
     font-size:2vw;
   }
   .feedback {
-    margin-top:30px;
+    margin-top:5px;
     text-align:center;
   }
   .correctAnswer {

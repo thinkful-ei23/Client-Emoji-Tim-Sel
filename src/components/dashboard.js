@@ -16,6 +16,7 @@ export class Dashboard extends React.Component {
   }
 
   render() {
+    console.log('dashboard this.props: ', this.props);
     const feedbackTag = (
       <span className="fb">{this.props.feedback.outcome}</span>
     );
@@ -31,6 +32,10 @@ export class Dashboard extends React.Component {
           feedback = {this.props.userAnswered ? feedbackTag : ''}
           correctCount ={this.props.feedback.numberTimesCorrect}
           inCorrectCount ={this.props.feedback.numberTimesInCorrect}
+          totalNumQuestions={this.props.feedback.numberQuestions}
+          userQuestions={this.props.currentUser.questions}
+          currentTimesCorrect={this.props.currentTimesCorrect}
+          currentTimesInCorrect={this.props.currentTimesInCorrect}
         />
 
         <Quiz userAnswered={this.props.userAnswered} />
@@ -46,7 +51,9 @@ const mapStateToProps = state => {
     question: state.question.question,
     feedback: state.question.feedback,
     emojiAnswer: state.question.question.description,
-    userAnswered: state.question.userAnswered
+    userAnswered: state.question.userAnswered,
+    currentTimesInCorrect: state.question.numberTimesInCorrect,
+    currentTimesCorrect: state.question.numberTimesCorrect
     // correctCount: state.question.numberTimesCorrect,
     // inCorrectCount: state.question.numberTimesInCorrect
   };

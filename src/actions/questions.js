@@ -85,6 +85,11 @@ export const validateUserInput = userInput => (dispatch, getState) => {
         // const numberTimesCorrect = data.msg.numberTimesCorrect;
         // const numberTimesInCorrect = data.msg.numberTimesInCorrect;
         dispatch(validateUserInputSuccess(feedback));
+        if (feedback.outcome === "Correct") {
+          dispatch(setNumberTimesCorrect());
+        } else {
+          dispatch(setNumberTimesInCorrect());
+        }
         // dispatch(setNumberTimesCorrect(numberTimesCorrect));
         // dispatch(setNumberTimesInCorrect(numberTimesInCorrect));
       })
