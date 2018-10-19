@@ -24,8 +24,8 @@ export default function Card(props) {
       <p className="scores">{props.feedback}!</p>
       <p className="correctAnswer">{props.userAnswered ? userAnsweredTag : ''}</p>
       <p className="feedback"><span className="title"></span>is the answer.</p>
-      <p className="scores"><span className="title">Num Times Correct:</span> {props.correctCount}</p>
-      <p className="scores"><span className="title">Num Attempts:</span> {numAttempts}</p>
+      <p className="scores"><span className="title">Times Correct:</span> {props.correctCount}</p>
+      <p className="scores"><span className="title">Attempts:</span> {numAttempts}</p>
       <p className="scores"><span className="title">Percent correct:</span> {pctCorrect}%</p>
 
     </div>
@@ -36,8 +36,8 @@ export default function Card(props) {
       <p className="scores">{props.feedback}!</p>
       <p className="correctAnswer">{props.userAnswered ? userAnsweredTag : ''}</p>
       <p className="feedback"><span className="title"></span>is the answer.</p>
-      <p className="scores"><span className="title">Num Times Correct:</span> {props.correctCount}</p>
-      <p className="scores"><span className="title">Num Attempts:</span> {numAttempts}</p>
+      <p className="scores"><span className="title">Times Correct:</span> {props.correctCount}</p>
+      <p className="scores"><span className="title">Attempts:</span> {numAttempts}</p>
       <p className="scores"><span className="title">Percent correct:</span> {pctCorrect}%</p>
 
     </div>
