@@ -7,7 +7,7 @@ export default function Card(props) {
   console.log('props.userQuestions.length: ', props.userQuestions.length);
   const userAnsweredTag = <span className="correctAnswer">{props.description}</span>;
   const numAttempts = +props.inCorrectCount + +props.correctCount;
-  const pctCorrect = Math.floor((props.correctCount * 100 / (+props.inCorrectCount + +props.correctCount),0));
+  const pctCorrect = Math.floor((props.correctCount * 100 / numAttempts));
   const currentCorrect = props.currentTimesCorrect;
   const currentAttempts = +props.currentTimesInCorrect + +props.currentTimesCorrect;
   let totalCorrect = 0;
