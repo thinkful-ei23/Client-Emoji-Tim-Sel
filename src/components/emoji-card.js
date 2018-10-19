@@ -7,7 +7,7 @@ export default function Card(props) {
   if (props.userQuestions === undefined) {
     return <div>loading</div>;
   }
-  console.log('props.userQuestions.length: ', props.userQuestions.length);
+  
   const userAnsweredTag = (
     <span className="correctAnswer">{props.description}</span>
   );
@@ -19,10 +19,10 @@ export default function Card(props) {
   let totalCorrect = 0;
 
   for (let i = 0; i < props.userQuestions.length; i++) {
-    console.log('Stats- numberTimesCorrect: ', i, ': ', props.userQuestions[i]);
+    
     totalCorrect += props.userQuestions[i].numberTimesCorrect;
   }
-  console.log('Stats- totalCorrect: ', totalCorrect);
+  
   let divResults;
   if (props.outcome === 'Incorrect') {
     divResults = (
