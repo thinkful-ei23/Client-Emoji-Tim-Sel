@@ -9,6 +9,13 @@ First, you register and login to the app. An emoji symbol is presented that you 
 
 ## Screenshots :camera:
 
+| <img alt="Intro" src="https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel/blob/master/src/images/intro.png" width="100%"> |
+|:---:|
+| Intro |
+
+| <img alt="About" src="https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel/blob/master/src/images/about.png" width="100%"> |
+|:---:|
+| About |
 
 | <img alt="Dashboard Page" src="https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel/blob/master/src/images/emojiScreens.png" width="100%"> |
 |:---:|
