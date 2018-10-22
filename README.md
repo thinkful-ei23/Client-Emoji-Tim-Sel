@@ -7,7 +7,7 @@ The Emoji Madness App will help you to learn the emoji language. The emoji langu
 
 First, you register and login to the app. An emoji symbol is presented that you attempt to identify by entering its meaning into an input field. Incorrect answers result in those emojis reappearing with increasing frequency.  Correct answers result in those emojis getting shuffled further to the end of the queue, and reappearing with less frequency. 
 
-## Screenshots :camera:
+## Slides :camera:
 
 | <img alt="Intro" src="https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel/blob/master/src/images/intro.png" width="100%"> |
 |:---:|
@@ -17,6 +17,7 @@ First, you register and login to the app. An emoji symbol is presented that you 
 |:---:|
 | About |
 
+## Screenshots :camera:
 | <img alt="Dashboard Page" src="https://github.com/thinkful-ei23/Client-Emoji-Tim-Sel/blob/master/src/images/emojiScreens.png" width="100%"> |
 |:---:|
 | Dashboard |
