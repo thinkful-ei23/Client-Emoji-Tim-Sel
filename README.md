@@ -3,7 +3,7 @@
 [Demo Emoji Madness App Here](https://emoji-space-rep-client.herokuapp.com/)
 
 ## Summary
-The Emoji Madness App will help you to learn the emoji language. The emoji language is based on symbols that easily bridge launguage barriers, save time, and add emotional nuance that is difficult to achieve in brief text exchanges. Spaced repetition learning helps users retain knowledge easier by testing them more often on the things they forget most frequently.
+The Emoji Madness App will help you to learn the emoji language. The emoji language is based on symbols that easily bridge language barriers, save time, and add emotional nuance that is difficult to achieve in brief text exchanges. Spaced repetition learning helps users retain knowledge easier by testing them more often on the things they forget most frequently.
 
 First, you register and login to the app. An emoji symbol is presented that you attempt to identify by entering its meaning into an input field. Incorrect answers result in those emojis reappearing with increasing frequency.  Correct answers result in those emojis getting shuffled further to the end of the queue, and reappearing with less frequency. 
 
