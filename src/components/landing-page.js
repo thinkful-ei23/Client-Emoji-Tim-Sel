@@ -13,7 +13,7 @@
 //   return (
 //     <div className="home">
 //       <h2>Welcome to the Emoji Spaced Repetition App TEST !</h2>
-//       <p>This course will help you to communicate quickly and effortlessly, even across language barriers!</p>
+//       <p>This app will help you to communicate quickly and effortlessly, even across language barriers!</p>
 //       <p>Emojis are not only fun, they are fantastic time savers, increase social power, and are a valuable communication method!</p>
 //       <LoginForm />
 //       <Link to="/register">Register</Link>
