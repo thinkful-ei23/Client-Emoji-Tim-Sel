@@ -38,16 +38,22 @@ export default function LandingPage(props) {
   return (
     <div>
       <section className="landing">
-        <p className="landingLogo"><img className={styles.logo} src={emojiLogo} alt="winking emoji" /></p>
+        <p className="landingLogo">
+          <img className={styles.logo} src={emojiLogo} alt="winking emoji" />
+        </p>
         <h2>Welcome to the Emoji Spaced Repetition App</h2>
         <p>
-          This app will help you to communicate quickly and effortlessly,
-          even across language barriers!
+          This app will help you to communicate quickly and effortlessly, even
+          across language barriers!
         </p>
+
         <p>
           Emojis are not only fun, they are fantastic time savers, increase
           social power, and are a valuable communication method!
         </p>
+        <br />
+        <p>Demo UserName: demouser</p>
+        <p>Demo Password: demouser</p>
 
         <Link to="/login" className={styles.buttonLink}>
           <Button label="Start Learning" className="startButton" />
